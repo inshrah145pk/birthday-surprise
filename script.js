@@ -6,7 +6,7 @@
 const openBtn = document.getElementById("openBtn");
 const welcomeScreen = document.getElementById("welcomeScreen");
 const birthdayPage = document.getElementById("birthdayPage");
-const music = document.getElementById("birthdayMusic") || null;
+const music = document.getElementById("birthdayMusic");
 const typewriter = document.getElementById("typewriter");
 const confettiContainer = document.getElementById("confetti-container");
 
@@ -27,17 +27,8 @@ openBtn.addEventListener("click", () => {
 
         birthdayPage.classList.add("fade-show");
 
-       document.addEventListener("visibilitychange", () => {
+        music.play().catch(() => {});
 
-    if (music) {
-        if (document.hidden) {
-            music.pause();
-        } else {
-            music.play().catch(() => {});
-        }
-    }
-
-});
         startTypewriter();
 
         createConfetti();
