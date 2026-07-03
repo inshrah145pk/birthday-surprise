@@ -1,192 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday My Dear Bestie ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,sans-serif;
-}
+    <title>Happy Birthday Alish 🎂</title>
 
-body{
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ff5fa2,#ff9fcf,#ffd6ea);
-}
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.card{
-width:90%;
-max-width:700px;
-padding:40px;
-border-radius:30px;
-text-align:center;
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(18px);
-box-shadow:0 15px 40px rgba(0,0,0,.2);
-color:white;
-z-index:2;
-}
-
-h1{
-font-size:48px;
-margin-bottom:20px;
-animation:glow 2s infinite alternate;
-}
-
-button{
-padding:16px 40px;
-font-size:20px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-background:white;
-color:#ff2f7d;
-font-weight:bold;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-#surprise{
-display:none;
-animation:fade 1.5s;
-}
-
-#surprise h2{
-font-size:38px;
-margin-bottom:20px;
-color:#fff36d;
-}
-
-#typing{
-font-size:22px;
-line-height:1.8;
-white-space:pre-line;
-}
-
-.heart{
-position:absolute;
-color:white;
-font-size:25px;
-animation:float linear infinite;
-opacity:.8;
-}
-
-@keyframes float{
-0%{
-transform:translateY(100vh);
-opacity:0;
-}
-20%{opacity:1;}
-100%{
-transform:translateY(-120vh);
-opacity:0;
-}
-}
-
-@keyframes glow{
-from{text-shadow:0 0 10px white;}
-to{text-shadow:0 0 30px yellow;}
-}
-
-@keyframes fade{
-from{opacity:0;transform:scale(.8);}
-to{opacity:1;transform:scale(1);}
-}
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="card">
+    <!-- ========================= -->
+    <!-- Background Effects -->
+    <!-- ========================= -->
 
-<div id="home">
+    <div class="stars"></div>
+    <div class="balloons"></div>
+    <div class="butterflies"></div>
+    <div id="confetti-container"></div>
 
-<h1>🎂 Happy Birthday<br>My Dear Bestie ❤️</h1>
+    <!-- ========================= -->
+    <!-- Music -->
+    <!-- ========================= -->
 
-<p style="font-size:20px;margin-bottom:30px;">
-A little surprise made with lots of love 💖
-</p>
+ <audio id="birthdayMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8b6d5c8b2.mp3?filename=happy-birthday-to-you-piano-112199.mp3" type="audio/mpeg">
+</audio>
+    </audio>
 
-<button onclick="openGift()">🎁 Open My Surprise</button>
+    <!-- ========================= -->
+    <!-- First Screen -->
+    <!-- ========================= -->
 
-</div>
+    <section id="welcomeScreen">
 
-<div id="surprise">
+        <div class="welcome-box">
 
-<h2>💖 Happy Birthday My Dear Bestie 💖</h2>
+            <h2 class="small-title">
+                🎁 A Special Surprise Is Waiting For You 🎁
+            </h2>
 
-<p id="typing"></p>
+            <button id="openBtn">
+                Open My Surprise ❤️
+            </button>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-<script>
+    <!-- ========================= -->
+    <!-- Main Birthday Content -->
+    <!-- ========================= -->
 
-for(let i=0;i<40;i++){
+    <section id="birthdayPage">
 
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML=["❤️","💖","💕","🌸","✨"][Math.floor(Math.random()*5)];
-h.style.left=Math.random()*100+"%";
-h.style.animationDuration=(5+Math.random()*5)+"s";
-h.style.fontSize=(20+Math.random()*25)+"px";
-document.body.appendChild(h);
+        <!-- Animated Heading -->
 
-}
+        <h1 class="mainHeading">
+            Happy Birthday <br>
+            <span>My Dear Bestie</span>
+            <br>
+            <span class="name">Alish ❤️</span>
+        </h1>
 
-const message=`🎂 Happy Birthday My Dear Bestie ❤️
+        <!-- Decorative Line -->
 
-May Allah bless you with endless happiness,
-good health, success and a beautiful life.
+        <div class="divider"></div>
 
-May every dream in your heart come true.
-May your smile always shine,
-and may Allah protect you from every sorrow.
+        <!-- Gift Box -->
 
-Ameen 🤲
+        <div class="gift-section">
 
-Thank you for always being by my side.
+            <div class="gift-box">
 
-You are not just my best friend...
-You are my family. 💕
+                <div class="lid"></div>
 
-Stay happy.
-Stay blessed.
-Love You Forever Bestie ❤️🌹`;
+                <div class="box"></div>
 
-function openGift(){
+                <div class="ribbon ribbon1"></div>
 
-document.getElementById("home").style.display="none";
-document.getElementById("surprise").style.display="block";
+                <div class="ribbon ribbon2"></div>
 
-let i=0;
+            </div>
 
-function type(){
+        </div>
 
-if(i<message.length){
-document.getElementById("typing").innerHTML+=message.charAt(i);
-i++;
-setTimeout(type,35);
-}
+        <!-- Typewriter Message -->
 
-}
+        <div class="message-box">
 
-type();
+            <p id="typewriter"></p>
 
-}
-</script>
+        </div>
+
+        <!-- Birthday Dua -->
+
+        <div class="dua-box">
+
+            <h2>🤲 Special Birthday Dua 🤲</h2>
+
+            <p>
+
+                May Allah bless you with endless happiness,
+                good health, success, peace,
+                and a beautiful future.
+
+                <br><br>
+
+                May every dream in your heart
+                become reality.
+
+                <br><br>
+
+                May your smile never fade
+                and your life always be filled
+                with love, joy and barakah.
+
+                <br><br>
+
+                <strong>Ameen ❤️</strong>
+
+            </p>
+
+        </div>
+
+        <!-- Birthday Wishes Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+                🌸 Stay Happy Always 🌸
+            </div>
+
+            <div class="card">
+                🌹 Keep Smiling Forever 🌹
+            </div>
+
+            <div class="card">
+                ✨ May All Your Dreams Come True ✨
+            </div>
+
+            <div class="card">
+                💖 You Deserve Endless Happiness 💖
+            </div>
+
+        </div>
+
+        <!-- Quote -->
+
+        <div class="quote">
+
+            "A true friend is one of the greatest blessings in life."
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer>
+
+            Made with Love by Your Bestie ❤️
+
+        </footer>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- Hidden Text For JS -->
+    <!-- ========================= -->
+
+    <script>
+
+        const birthdayText = `
+
+Dear Bestie Alish ❤️,
+
+Happy Birthday to the most wonderful person.
+
+I pray that your life is always filled with happiness,
+love, peace, success and countless beautiful memories.
+
+You deserve all the smiles in the world.
+
+May every single day of your life
+bring you closer to your dreams.
+
+Always stay the kind, caring,
+beautiful and amazing person you are.
+
+Thank you for being such a precious friend.
+
+May Allah always protect you,
+guide you and bless you
+with endless happiness.
+
+Happy Birthday Once Again ❤️🎂
+
+`;
+
+    </script>
+
+    <!-- Main JavaScript -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

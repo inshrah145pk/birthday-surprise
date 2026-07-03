@@ -1,0 +1,978 @@
+/*=========================================
+        HAPPY BIRTHDAY ALISH
+        Premium Birthday Website
+=========================================*/
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+    background:linear-gradient(135deg,#dff6ff,#fff8e7,#e7f9ff);
+
+    min-height:100vh;
+
+    color:#1d3557;
+
+}
+
+/*==================================
+            Welcome Screen
+==================================*/
+
+#welcomeScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#dff6ff,#fffdf2);
+
+    z-index:99999;
+
+}
+
+.welcome-box{
+
+    text-align:center;
+
+    animation:fadeUp 1.5s;
+
+}
+
+.small-title{
+
+    font-size:35px;
+
+    margin-bottom:40px;
+
+    color:#175676;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+#openBtn{
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:#fff;
+
+    background:linear-gradient(45deg,#00b4d8,#0077b6);
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.20);
+
+}
+
+#openBtn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+/*==================================
+        Birthday Page
+==================================*/
+
+#birthdayPage{
+
+    display:none;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*==================================
+          Heading
+==================================*/
+
+.mainHeading{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:82px;
+
+    color:#0077b6;
+
+    animation:zoomIn 2s infinite alternate;
+
+    line-height:1.2;
+
+}
+
+.mainHeading span{
+
+    color:#023e8a;
+
+}
+
+.mainHeading .name{
+
+    color:#ff006e;
+
+}
+
+.divider{
+
+    width:240px;
+
+    height:5px;
+
+    margin:30px auto;
+
+    border-radius:30px;
+
+    background:linear-gradient(to right,#00b4d8,#90e0ef,#0077b6);
+
+}
+
+/*==================================
+            Gift Box
+==================================*/
+
+.gift-section{
+
+    margin-top:30px;
+
+    margin-bottom:50px;
+
+}
+
+.gift-box{
+
+    position:relative;
+
+    width:170px;
+
+    height:170px;
+
+    margin:auto;
+
+    animation:giftJump 2s infinite;
+
+}
+
+.box{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:170px;
+
+    height:120px;
+
+    background:#00b4d8;
+
+    border-radius:12px;
+
+}
+
+.lid{
+
+    position:absolute;
+
+    top:22px;
+
+    width:190px;
+
+    left:-10px;
+
+    height:35px;
+
+    background:#0077b6;
+
+    border-radius:12px;
+
+}
+
+.ribbon{
+
+    position:absolute;
+
+    background:#fff;
+
+}
+
+.ribbon1{
+
+    width:20px;
+
+    height:170px;
+
+    left:75px;
+
+}
+
+.ribbon2{
+
+    height:20px;
+
+    width:170px;
+
+    top:70px;
+
+}
+
+/*==================================
+        Message Box
+==================================*/
+
+.message-box{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    margin-top:20px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.60);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.12);
+
+}
+
+#typewriter{
+
+    white-space:pre-line;
+
+    font-size:24px;
+
+    line-height:1.9;
+
+    color:#003049;
+
+}
+
+/*==================================
+            Dua
+==================================*/
+
+.dua-box{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:70px auto;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:#ffffffd9;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.12);
+
+}
+
+.dua-box h2{
+
+    margin-bottom:25px;
+
+    color:#0077b6;
+
+    font-size:42px;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.dua-box p{
+
+    font-size:23px;
+
+    line-height:2;
+
+}
+/*==================================
+            Cards
+==================================*/
+
+.cards{
+
+    width:95%;
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:#ffffffd9;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+
+    font-size:22px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px) scale(1.05);
+
+}
+
+/*==================================
+             Quote
+==================================*/
+
+.quote{
+
+    margin-top:60px;
+
+    font-size:36px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#0077b6;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+/*==================================
+             Footer
+==================================*/
+
+footer{
+
+    margin-top:70px;
+
+    padding:30px;
+
+    font-size:24px;
+
+    color:#023e8a;
+
+    font-weight:600;
+
+}
+
+/*==================================
+              Stars
+==================================*/
+
+.stars{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.stars::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    80px 100px white,
+
+    200px 180px white,
+
+    320px 80px white,
+
+    450px 200px white,
+
+    600px 150px white,
+
+    750px 90px white,
+
+    900px 230px white,
+
+    1000px 120px white,
+
+    1150px 280px white,
+
+    1300px 100px white,
+
+    150px 350px white,
+
+    350px 450px white,
+
+    650px 380px white,
+
+    950px 500px white,
+
+    1200px 430px white;
+
+    animation:twinkle 2s infinite alternate;
+
+}
+
+/*==================================
+            Balloons
+==================================*/
+
+.balloons{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.balloons::before{
+
+    content:"🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈";
+
+    position:absolute;
+
+    font-size:45px;
+
+    width:100%;
+
+    bottom:-120px;
+
+    animation:balloonMove 20s linear infinite;
+
+}
+
+/*==================================
+          Butterflies
+==================================*/
+
+.butterflies{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.butterflies::before{
+
+    content:"🦋 🦋 🦋 🦋 🦋 🦋 🦋";
+
+    position:absolute;
+
+    top:15%;
+
+    width:100%;
+
+    font-size:35px;
+
+    animation:fly 18s linear infinite;
+
+}
+
+/*==================================
+        Confetti Container
+==================================*/
+
+#confetti-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+/*==================================
+          Animations
+==================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.05);
+
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:0 0 10px #90e0ef;
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 20px #00b4d8,
+
+        0 0 35px #0077b6;
+
+    }
+
+}
+
+@keyframes giftJump{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes balloonMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+@keyframes fly{
+
+    from{
+
+        transform:translateX(-250px);
+
+    }
+
+    to{
+
+        transform:translateX(140vw);
+
+    }
+
+}
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.3;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+/*==================================
+        Confetti Pieces
+==================================*/
+
+.confetti{
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:3px;
+
+    animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+    from{
+
+        transform:translateY(-100vh) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(120vh) rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================
+        Glass Hover Effects
+==================================*/
+
+.message-box,
+.dua-box,
+.card{
+
+    transition:0.4s ease;
+
+}
+
+.message-box:hover,
+.dua-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.card:hover{
+
+    background:#ffffff;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+/*==================================
+        Smooth Fade
+==================================*/
+
+.fade-show{
+
+    animation:fadeContent 1.5s ease;
+
+}
+
+@keyframes fadeContent{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================
+        Scroll Bar
+==================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#dff6ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0077b6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#023e8a;
+
+}
+
+/*==================================
+        Selection Color
+==================================*/
+
+::selection{
+
+    background:#00b4d8;
+
+    color:white;
+
+}
+
+/*==================================
+        Responsive Design
+==================================*/
+
+@media(max-width:992px){
+
+.mainHeading{
+
+    font-size:62px;
+
+}
+
+.small-title{
+
+    font-size:28px;
+
+}
+
+#typewriter{
+
+    font-size:20px;
+
+}
+
+.dua-box h2{
+
+    font-size:34px;
+
+}
+
+.dua-box p{
+
+    font-size:20px;
+
+}
+
+.quote{
+
+    font-size:30px;
+
+}
+
+.card{
+
+    font-size:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.mainHeading{
+
+    font-size:48px;
+
+}
+
+#openBtn{
+
+    font-size:20px;
+
+    padding:16px 38px;
+
+}
+
+.gift-box{
+
+    transform:scale(.9);
+
+}
+
+.message-box,
+.dua-box{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+#typewriter{
+
+    font-size:18px;
+
+}
+
+.dua-box p{
+
+    font-size:18px;
+
+}
+
+footer{
+
+    font-size:20px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.mainHeading{
+
+    font-size:38px;
+
+    line-height:1.4;
+
+}
+
+.small-title{
+
+    font-size:22px;
+
+}
+
+#openBtn{
+
+    font-size:18px;
+
+    padding:15px 30px;
+
+}
+
+.quote{
+
+    font-size:24px;
+
+}
+
+.card{
+
+    font-size:18px;
+
+    padding:22px;
+
+}
+
+footer{
+
+    font-size:18px;
+
+}
+
+}
+
+/*==================================
+        End of CSS
+==================================*/
