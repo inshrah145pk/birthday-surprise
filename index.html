@@ -1,455 +1,213 @@
-/*=========================================
-        Happy Birthday Alisha
-        Premium Birthday Website
-=========================================*/
+<!DOCTYPE html>
+<html lang="en">
 
-const openBtn = document.getElementById("openBtn");
-const welcomeScreen = document.getElementById("welcomeScreen");
-const birthdayPage = document.getElementById("birthdayPage");
-const music = document.getElementById("birthdayMusic") || null;
-const typewriter = document.getElementById("typewriter");
-const confettiContainer = document.getElementById("confetti-container");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/*==================================
-        Open Surprise
-==================================*/
+    <title>Happy Birthday Alisha 🎂</title>
 
-openBtn.addEventListener("click", () => {
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    welcomeScreen.style.opacity = "0";
-    welcomeScreen.style.transition = "1s";
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    setTimeout(() => {
+<body>
 
-        welcomeScreen.style.display = "none";
+    <!-- ========================= -->
+    <!-- Background Effects -->
+    <!-- ========================= -->
 
-        birthdayPage.style.display = "block";
+    <div class="stars"></div>
+    <div class="balloons"></div>
+    <div class="butterflies"></div>
+    <div id="confetti-container"></div>
 
-        birthdayPage.classList.add("fade-show");
+    <!-- ========================= -->
+    <!-- Music -->
+    <!-- ========================= -->
 
-       document.addEventListener("visibilitychange", () => {
+    <audio id="birthdayMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
-    if (music) {
-        if (document.hidden) {
-            music.pause();
-        } else {
-            music.play().catch(() => {});
-        }
-    }
+    <!-- ========================= -->
+    <!-- First Screen -->
+    <!-- ========================= -->
 
-});
-        startTypewriter();
+    <section id="welcomeScreen">
 
-        createConfetti();
+        <div class="welcome-box">
 
-    }, 900);
+            <h2 class="small-title">
+                🎁 A Special Surprise Is Waiting For You 🎁
+            </h2>
 
-});
+            <button id="openBtn">
+                Open My Surprise ❤️
+            </button>
 
-/*==================================
-        Typewriter Text
-==================================*/
+        </div>
 
-let index = 0;
+    </section>
 
-function startTypewriter() {
+    <!-- ========================= -->
+    <!-- Main Birthday Content -->
+    <!-- ========================= -->
 
-    typewriter.innerHTML = "";
+    <section id="birthdayPage">
 
-    function typing() {
+        <!-- Animated Heading -->
 
-        if (index < birthdayText.length) {
+        <h1 class="mainHeading">
+            Happy Birthday <br>
+            <span>My Dear Bestie</span>
+            <br>
+            <span class="name">Alisha ❤️</span>
+        </h1>
 
-            typewriter.innerHTML += birthdayText.charAt(index);
+        <!-- Decorative Line -->
 
-            index++;
+        <div class="divider"></div>
 
-            setTimeout(typing, 40);
+        <!-- Gift Box -->
 
-        }
+        <div class="gift-section">
 
-    }
+            <div class="gift-box">
 
-    typing();
+                <div class="lid"></div>
 
-}
+                <div class="box"></div>
 
-/*==================================
-        Confetti Colors
-==================================*/
+                <div class="ribbon ribbon1"></div>
 
-const colors = [
+                <div class="ribbon ribbon2"></div>
 
-    "#ff006e",
-    "#3a86ff",
-    "#00b4d8",
-    "#90e0ef",
-    "#ffd60a",
-    "#06d6a0",
-    "#fb5607",
-    "#8338ec",
-    "#ffffff"
+            </div>
 
-];
+        </div>
 
-/*==================================
-        Create Confetti
-==================================*/
+        <!-- Typewriter Message -->
 
-function createConfetti() {
+        <div class="message-box">
 
-    for (let i = 0; i < 180; i++) {
+            <p id="typewriter"></p>
 
-        const piece = document.createElement("div");
+        </div>
 
-        piece.className = "confetti";
+        <!-- Birthday Dua -->
 
-        piece.style.left = Math.random() * 100 + "%";
+        <div class="dua-box">
 
-        piece.style.background =
-            colors[Math.floor(Math.random() * colors.length)];
+            <h2>🤲 Special Birthday Dua 🤲</h2>
 
-        piece.style.animationDuration =
-            (3 + Math.random() * 4) + "s";
+            <p>
 
-        piece.style.animationDelay =
-            Math.random() * 2 + "s";
+                May Allah bless you with endless happiness,
+                good health, success, peace,
+                and a beautiful future.
 
-        piece.style.opacity = Math.random();
+                <br><br>
 
-        piece.style.transform =
-            `rotate(${Math.random() * 360}deg)`;
+                May every dream in your heart
+                become reality.
 
-        confettiContainer.appendChild(piece);
+                <br><br>
 
-    }
+                May your smile never fade
+                and your life always be filled
+                with love, joy and barakah.
 
-}
-/*==================================
-        Continuous Confetti
-==================================*/
+                <br><br>
 
-setInterval(() => {
+                <strong>Ameen ❤️</strong>
 
-    if (birthdayPage.style.display === "block") {
+            </p>
 
-        createMiniConfetti();
+        </div>
 
-    }
+        <!-- Birthday Wishes Cards -->
 
-}, 1200);
+        <div class="cards">
 
-function createMiniConfetti() {
+            <div class="card">
+                🌸 Stay Happy Always 🌸
+            </div>
 
-    for (let i = 0; i < 25; i++) {
+            <div class="card">
+                🌹 Keep Smiling Forever 🌹
+            </div>
 
-        const piece = document.createElement("div");
+            <div class="card">
+                ✨ May All Your Dreams Come True ✨
+            </div>
 
-        piece.className = "confetti";
+            <div class="card">
+                💖 You Deserve Endless Happiness 💖
+            </div>
 
-        piece.style.left = Math.random() * 100 + "%";
+        </div>
 
-        piece.style.background =
-            colors[Math.floor(Math.random() * colors.length)];
+        <!-- Quote -->
 
-        piece.style.animationDuration =
-            (2 + Math.random() * 2) + "s";
+        <div class="quote">
 
-        piece.style.opacity = Math.random();
+            "A true friend is one of the greatest blessings in life."
 
-        confettiContainer.appendChild(piece);
+        </div>
 
-        setTimeout(() => {
+        <!-- Footer -->
 
-            piece.remove();
+        <footer>
 
-        }, 5000);
+            Made with Love by Your Bestie ❤️
 
-    }
+        </footer>
 
-}
+    </section>
 
-/*==================================
-        Gift Box Animation
-==================================*/
+    <!-- ========================= -->
+    <!-- Hidden Text For JS -->
+    <!-- ========================= -->
 
-const giftLid = document.querySelector(".lid");
+    <script>
 
-const giftBox = document.querySelector(".gift-box");
+        const birthdayText = `
 
-let giftOpened = false;
+Dear Bestie Alisha ❤️,
 
-giftBox.addEventListener("click", () => {
+Happy Birthday to the most wonderful person.
 
-    if (giftOpened) return;
+I pray that your life is always filled with happiness,
+love, peace, success and countless beautiful memories.
 
-    giftOpened = true;
+You deserve all the smiles in the world.
 
-    giftLid.style.transition = "0.8s";
+May every single day of your life
+bring you closer to your dreams.
 
-    giftLid.style.transform =
-        "translateY(-55px) rotate(-18deg)";
+Always stay the kind, caring,
+beautiful and amazing person you are.
 
-    giftBox.style.transform = "scale(1.08)";
+Thank you for being such a precious friend.
 
-    setTimeout(() => {
+May Allah always protect you,
+guide you and bless you
+with endless happiness.
 
-        giftBox.style.transform = "scale(1)";
+Happy Birthday Once Again ❤️🎂
 
-    }, 500);
+`;
 
-});
+    </script>
 
-/*==================================
-        Floating Hearts
-==================================*/
+    <!-- Main JavaScript -->
 
-function createHeart() {
+    <script src="script.js"></script>
 
-    const heart = document.createElement("div");
+</body>
 
-    heart.innerHTML = "❤️";
-
-    heart.style.position = "fixed";
-
-    heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.bottom = "-30px";
-
-    heart.style.fontSize =
-        (18 + Math.random() * 20) + "px";
-
-    heart.style.pointerEvents = "none";
-
-    heart.style.zIndex = "999";
-
-    heart.style.transition = "transform linear";
-
-    document.body.appendChild(heart);
-
-    let position = 0;
-
-    const move = setInterval(() => {
-
-        position += 3;
-
-        heart.style.transform =
-            `translateY(-${position}px)`;
-
-        heart.style.opacity =
-            1 - (position / 700);
-
-        if (position > 700) {
-
-            clearInterval(move);
-
-            heart.remove();
-
-        }
-
-    }, 20);
-
-}
-
-setInterval(() => {
-
-    if (birthdayPage.style.display === "block") {
-
-        createHeart();
-
-    }
-
-}, 1500);
-
-/*==================================
-        Sparkle Effect
-==================================*/
-
-function sparkle() {
-
-    document.body.animate(
-
-        [
-
-            {
-
-                filter: "brightness(1)"
-
-            },
-
-            {
-
-                filter: "brightness(1.08)"
-
-            },
-
-            {
-
-                filter: "brightness(1)"
-
-            }
-
-        ],
-
-        {
-
-            duration: 1000
-
-        }
-
-    );
-
-}
-
-setInterval(() => {
-
-    if (birthdayPage.style.display === "block") {
-
-        sparkle();
-
-    }
-
-}, 4000);
-/*==================================
-        Auto Scroll Animation
-==================================*/
-
-function smoothReveal() {
-
-    const elements = document.querySelectorAll(
-        ".message-box, .dua-box, .card, .quote, footer"
-    );
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("fade-show");
-
-            }
-
-        });
-
-    }, {
-        threshold: 0.2
-    });
-
-    elements.forEach(el => observer.observe(el));
-
-}
-
-window.addEventListener("load", smoothReveal);
-
-/*==================================
-        Remove Old Confetti
-==================================*/
-
-setInterval(() => {
-
-    const confetti = document.querySelectorAll(".confetti");
-
-    if (confetti.length > 250) {
-
-        for (let i = 0; i < 80; i++) {
-
-            if (confetti[i]) {
-
-                confetti[i].remove();
-
-            }
-
-        }
-
-    }
-
-}, 5000);
-
-/*==================================
-        Music Restart Safety
-==================================*/
-
-music.addEventListener("ended", () => {
-
-    music.currentTime = 0;
-
-    music.play().catch(() => {});
-
-});
-
-/*==================================
-        Page Visibility
-==================================*/
-
-document.addEventListener("visibilitychange", () => {
-
-    if (document.hidden) {
-
-        music.pause();
-
-    } else {
-
-        music.play().catch(() => {});
-
-    }
-
-});
-
-/*==================================
-        Welcome Console Message
-==================================*/
-
-console.log(`
-====================================
-
-🎉 Happy Birthday Alish ❤️
-
-Made with Love by Your Bestie ❤️
-
-Have a wonderful birthday!
-
-====================================
-`);
-
-/*==================================
-        Final Glow Effect
-==================================*/
-
-setInterval(() => {
-
-    const heading = document.querySelector(".mainHeading");
-
-    if (!heading) return;
-
-    heading.animate(
-
-        [
-            {
-                transform: "scale(1)"
-            },
-            {
-                transform: "scale(1.03)"
-            },
-            {
-                transform: "scale(1)"
-            }
-        ],
-
-        {
-            duration: 1800
-        }
-
-    );
-
-}, 2500);
-
-/*==================================
-        Finish
-==================================*/
-
-window.onload = () => {
-
-    document.body.style.opacity = "1";
-
-};
+</html>
