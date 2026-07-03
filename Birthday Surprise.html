@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Dear Bestie ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff5fa2,#ff9fcf,#ffd6ea);
+}
+
+.card{
+width:90%;
+max-width:700px;
+padding:40px;
+border-radius:30px;
+text-align:center;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(18px);
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+color:white;
+z-index:2;
+}
+
+h1{
+font-size:48px;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
+}
+
+button{
+padding:16px 40px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:white;
+color:#ff2f7d;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#surprise{
+display:none;
+animation:fade 1.5s;
+}
+
+#surprise h2{
+font-size:38px;
+margin-bottom:20px;
+color:#fff36d;
+}
+
+#typing{
+font-size:22px;
+line-height:1.8;
+white-space:pre-line;
+}
+
+.heart{
+position:absolute;
+color:white;
+font-size:25px;
+animation:float linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{opacity:1;}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 30px yellow;}
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="home">
+
+<h1>🎂 Happy Birthday<br>My Dear Bestie ❤️</h1>
+
+<p style="font-size:20px;margin-bottom:30px;">
+A little surprise made with lots of love 💖
+</p>
+
+<button onclick="openGift()">🎁 Open My Surprise</button>
+
+</div>
+
+<div id="surprise">
+
+<h2>💖 Happy Birthday My Dear Bestie 💖</h2>
+
+<p id="typing"></p>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML=["❤️","💖","💕","🌸","✨"][Math.floor(Math.random()*5)];
+h.style.left=Math.random()*100+"%";
+h.style.animationDuration=(5+Math.random()*5)+"s";
+h.style.fontSize=(20+Math.random()*25)+"px";
+document.body.appendChild(h);
+
+}
+
+const message=`🎂 Happy Birthday My Dear Bestie ❤️
+
+May Allah bless you with endless happiness,
+good health, success and a beautiful life.
+
+May every dream in your heart come true.
+May your smile always shine,
+and may Allah protect you from every sorrow.
+
+Ameen 🤲
+
+Thank you for always being by my side.
+
+You are not just my best friend...
+You are my family. 💕
+
+Stay happy.
+Stay blessed.
+Love You Forever Bestie ❤️🌹`;
+
+function openGift(){
+
+document.getElementById("home").style.display="none";
+document.getElementById("surprise").style.display="block";
+
+let i=0;
+
+function type(){
+
+if(i<message.length){
+document.getElementById("typing").innerHTML+=message.charAt(i);
+i++;
+setTimeout(type,35);
+}
+
+}
+
+type();
+
+}
+</script>
+
+</body>
+</html>
